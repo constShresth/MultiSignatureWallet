@@ -64,6 +64,9 @@ contract MultiSigWallet{
     // receive() external payable{
     //     emit Deposit(msg.sender,msg.value,address(this).balance);
     // }
+
+    //Created a deposit function instead of receive since I was unable to call receive()
+    //from the test file.
     function deposit() external payable{
         emit Deposit(msg.sender,msg.value,address(this).balance);
     }
